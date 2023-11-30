@@ -1,8 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:sign_vision/views/introduction_scrn/views/pages.dart';
-
-import '../clrs/clrs.dart';
+import '../../../utils/colors.dart';
 
 class Splash extends StatefulWidget {
   const Splash({super.key});

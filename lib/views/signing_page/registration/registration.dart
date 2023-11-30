@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import '../components/firebase.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:sign_vision/views/hom_page/home.dart';
 import '../login/login.dart';
 
 void main()
 {
-  runApp(MaterialApp(
+  runApp(GetMaterialApp(
     debugShowCheckedModeBanner: false,
     home: Signup(),));
 }
@@ -15,10 +17,10 @@ class Signup extends StatefulWidget {
 
 class _SignupState extends State<Signup> {
   var formkey2 = GlobalKey<FormState>();
-  var uname = TextEditingController();
-  var uemail = TextEditingController();
-  var pass = TextEditingController();
-  var cpass = TextEditingController();
+  final name  = TextEditingController();
+  final uname = TextEditingController();
+  final pwd   = TextEditingController();
+  late SharedPreferences preferences;
 
   bool passvisibility1 = true;
   bool passvisibility2 = true;
@@ -29,7 +31,6 @@ class _SignupState extends State<Signup> {
       child: Scaffold(
         body: SingleChildScrollView(
           child: Form(
-            key: formkey2,
             child: Column(children: [
               SizedBox(height: 70,),
               const Padding(
@@ -55,7 +56,7 @@ class _SignupState extends State<Signup> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
-                  controller: uname,
+                  controller: name,
                   validator: (email) {
                     if (email!.isEmpty) {
                       return "Name is required";
@@ -76,7 +77,7 @@ class _SignupState extends State<Signup> {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
-                  controller: uemail,
+                  controller: uname,
                   validator: (username) {
                     if (username!.isEmpty ||
                         !username.contains("@") ||
@@ -105,7 +106,7 @@ class _SignupState extends State<Signup> {
                       return null;
                     }
                   },
-                  controller: pass,
+                  controller: pwd,
                   obscuringCharacter: "*",
                   obscureText: passvisibility1,
                   decoration: InputDecoration(
@@ -129,45 +130,6 @@ class _SignupState extends State<Signup> {
 
                 ),
               ),
-              SizedBox(
-                height: 10,
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: TextFormField(
-                  validator: (pass2) {
-                    if (pass2!.isEmpty || pass2.length < 6) {
-                      return "Password length must be greater than 6";
-                    } else if (pass.text != cpass.text) {
-                      return "Password not matching";
-                    } else {
-                      return null;
-                    }
-                  },
-                  controller: cpass,
-                  obscuringCharacter: "*",
-                  obscureText: passvisibility2,
-                  decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.lock),
-                      suffixIcon: IconButton(
-                          onPressed: () {
-                            setState(() {
-                              if (passvisibility2 == true) {
-                                passvisibility2 = false;
-                              } else {
-                                passvisibility2 = true;
-                              }
-                            });
-                          },
-                          icon: Icon(passvisibility2 == true
-                              ? Icons.visibility_off_sharp
-                              : Icons.visibility)),
-                      hintText: "Conform Password",
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10))),
-
-                ),
-              ),
               SizedBox(height: 40,),
               ElevatedButton(
                   style: ButtonStyle(
@@ -176,25 +138,7 @@ class _SignupState extends State<Signup> {
                           RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30.0),
                           ))),
-                  onPressed: () async {
-                    final valid2 = formkey2.currentState!.validate();
-                    if (valid2) {
-                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                          action: SnackBarAction(label: 'UNDO', onPressed: () {}),
-                          content: const Text('Invalid username / password')));
-                      String mail = uemail.text.trim();
-                      String pwd = pass.text.trim();
-
-                      FirebaseHelper().signUp(email: mail, password: pwd).then((result) {
-                        if (result == null) {
-                          Navigator.of(context).push(
-                              MaterialPageRoute(builder: (context) => Login()));
-                        }else{
-                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(result)));
-                        }
-                      });
-                    }
-                  },
+                  onPressed: () => storedata(),
                   child: const Text(
                     "Sign Up",
                     style: TextStyle(color: Colors.black),
@@ -207,5 +151,17 @@ class _SignupState extends State<Signup> {
         ),
       ),
     );
+  }
+  void storedata() async {
+    String personname = name.text;
+    String username = uname.text;
+    String password = pwd.text;
+
+    preferences = await SharedPreferences.getInstance()!;
+    preferences.setString('name', personname);
+    preferences.setString('uname', username);
+    preferences.setString('pass', password);
+
+    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>HomePage()));
   }
 }

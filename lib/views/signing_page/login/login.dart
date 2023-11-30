@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../introduction_scrn/views/pages.dart';
-import '../components/firebase.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:sign_vision/views/hom_page/home.dart';
 import '../registration/registration.dart';
 
 void main(){
@@ -14,17 +14,31 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  var formkey = GlobalKey<FormState>();
   bool passwordvisibility = true;
+  final uname = TextEditingController();
+  final pass = TextEditingController();
+  late SharedPreferences preferences;
+  late bool newuser;
 
-  final TextEditingController uemail = TextEditingController();
-  final TextEditingController cpass = TextEditingController();
+  @override
+  void initState() {
+    check_if_user_already_login();
+    super.initState();
+  }
+
+  void check_if_user_already_login() async{
+    preferences = await SharedPreferences.getInstance()!;
+    newuser = preferences.getBool('newuser') ?? true;
+    if(newuser == false){
+      Navigator.push(context, MaterialPageRoute(
+          builder: (context)=>HomePage()));
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Form(
-          key: formkey,
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -46,7 +60,7 @@ class _LoginState extends State<Login> {
                 Padding(
                   padding: EdgeInsets.all(20.0),
                   child: TextFormField(
-                    controller: uemail,
+                    controller: uname,
                     decoration: InputDecoration(
                         hintText: "Username",
                         prefixIcon: Icon(Icons.contact_mail_outlined),
@@ -65,7 +79,7 @@ class _LoginState extends State<Login> {
                 Padding(
                     padding: EdgeInsets.only(left: 20, right: 20, bottom: 50),
                     child: TextFormField(
-                      controller: cpass,
+                      controller: pass,
                       obscureText: passwordvisibility,
                       obscuringCharacter: "*",
                       decoration: InputDecoration(
@@ -100,32 +114,36 @@ class _LoginState extends State<Login> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
-                    onPressed: () {
-                      String mail = uemail.text.trim();
-                      String pwd = cpass.text.trim();
-
-                      FirebaseHelper().signIn(email: mail, password: pwd).then((result) {
-                        if (result == null) {
-                          Navigator.of(context).push(
-                              MaterialPageRoute(builder: (context) => HomePage()));
-                        } else {
-                          ScaffoldMessenger.of(context)
-                              .showSnackBar(SnackBar(content: Text(result)));
-                        }
-                      });
-                    },
-                    child: const Text("LOGIN"),
+                      onPressed: () => validateandLogin(),
+                  child: const Text("LOGIN"),
                   ),
                 ),
                 TextButton(
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Signup()));
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => Signup()));
                     },
                     child: Text("New User ? Sign Up")),
               ],
             ),
           ),
         ));
+  }
+  void validateandLogin() async {
+    preferences = await SharedPreferences.getInstance()!;
+    String storedusername = preferences.getString('uname')!;
+    String storedpassword = preferences.getString('pass')!;
+
+    String usename = uname.text;
+    String pwd    = pass.text;
+    preferences.setBool('newuser', false);
+
+    if (storedusername == usename && storedpassword == pwd) {
+      Navigator.of(context)
+          .push(MaterialPageRoute(builder: (context) => Signup()));
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text("Invalid username or password")));
+    }
   }
 }

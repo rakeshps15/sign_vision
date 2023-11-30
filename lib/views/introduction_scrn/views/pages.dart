@@ -1,7 +1,7 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import '../clrs/clrs.dart';
+import '../../../utils/colors.dart';
 import '../model/model_page.dart';
 import 'components.dart';
 

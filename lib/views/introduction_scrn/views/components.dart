@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import '../../../utils/colors.dart';
 import '../../signing_page/option/main_option.dart';
-import '../clrs/clrs.dart';
 
 
 class GetStartBtn extends StatefulWidget {
