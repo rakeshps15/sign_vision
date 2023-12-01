@@ -134,11 +134,11 @@ class _LoginState extends State<Login> {
     String storedusername = preferences.getString('uname')!;
     String storedpassword = preferences.getString('pass')!;
 
-    String usename = uname.text;
+    String username = uname.text;
     String pwd    = pass.text;
     preferences.setBool('newuser', false);
 
-    if (storedusername == usename && storedpassword == pwd) {
+    if (storedusername == username && storedpassword == pwd) {
       Navigator.of(context)
           .push(MaterialPageRoute(builder: (context) => Signup()));
     } else {

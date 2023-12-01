@@ -75,6 +75,9 @@ flutter:
   assets:
     - asset/
     - asset/intro/
+    - asset/american/Alphabets/
+    - asset/american/Numbers/
+    - asset/british/Alphabets/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

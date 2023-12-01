@@ -86,7 +86,7 @@ class _DrawerExState extends State<DrawerEx> {
               title: Text("Signout",
                   style: TextStyle(fontSize: 18, color: Colors.white70)),
               onTap: () {
-                preferences.setBool('newuser', true);
+                // preferences.setBool('newuser', true);
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (context) => MainUi()));
               },

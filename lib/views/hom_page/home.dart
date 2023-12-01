@@ -4,7 +4,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sign_vision/utils/colors.dart';
 import 'package:sign_vision/views/hom_page/upload.dart';
 import 'package:sign_vision/views/signing_page/login/login.dart';
-
 import 'components/drawer/settings.dart';
 
 class HomePage extends StatefulWidget {
