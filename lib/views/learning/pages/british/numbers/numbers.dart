@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:sign_vision/utils/colors.dart';
 import 'package:sign_vision/views/hom_page/learnerpage.dart';
+import 'package:sign_vision/views/learning/pages/australian/button.dart';
 import '../../../../hom_page/home.dart';
 import '../../british/numbers/utils.dart';
 
@@ -16,7 +17,8 @@ class _BritishNumbersState extends State<BritishNumbers> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(onPressed: ()=>Get.to(Learning()), icon: Icon(Icons.arrow_back)),
+        leading: IconButton(onPressed: ()=>Get.to(AslButton3()), icon: Icon(Icons.arrow_back)),
+        backgroundColor: MyColors.kblueColor,
       ),
       backgroundColor: MyColors.kblueColor,
       body: Padding(

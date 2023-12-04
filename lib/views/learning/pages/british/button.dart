@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:sign_vision/utils/colors.dart';
 import 'package:sign_vision/views/hom_page/home.dart';
 import 'package:sign_vision/views/learning/pages/british/alphabets/alphabets.dart';
 import 'package:sign_vision/views/learning/pages/british/numbers/numbers.dart';
+
+import '../../../hom_page/learnerpage.dart';
 
 class AslButton2 extends StatelessWidget {
   const AslButton2({super.key});
@@ -11,7 +15,7 @@ class AslButton2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: BackButton(color: Colors.black,onPressed: ()=> HomePage(),),
+        leading: IconButton(onPressed: ()=>Get.to(Learning()), icon: Icon(Icons.arrow_back)),
       ),
       backgroundColor: MyColors.kblueColor,
       body: Column(mainAxisAlignment: MainAxisAlignment.center,

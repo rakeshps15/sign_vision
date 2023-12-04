@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:sign_vision/utils/colors.dart';
+import 'package:sign_vision/views/learning/pages/american/button.dart';
 import '../../../../hom_page/learnerpage.dart';
 import '../../american/numbers/utils.dart';
 
@@ -15,7 +16,8 @@ class _AmericanNumbersState extends State<AmericanNumbers> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(onPressed: ()=>Get.to(Learning()), icon: Icon(Icons.arrow_back)),
+        leading: IconButton(onPressed: ()=>Get.to(AslButton1()), icon: Icon(Icons.arrow_back)),
+        backgroundColor: MyColors.kblueColor,
       ),
       backgroundColor: MyColors.kblueColor,
       body: Padding(
