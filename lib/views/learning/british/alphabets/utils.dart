@@ -1,5 +1,5 @@
 var images = [
-  "asset/british/Alphabets/A.JPG","asset/british/Alphabets/B.jpg","asset/british/Alphabets/C.jpg","asset/british/Alphabets/D.jpg",
+  "asset/british/Alphabets/A.jpg","asset/british/Alphabets/B.jpg","asset/british/Alphabets/C.jpg","asset/british/Alphabets/D.jpg",
   "asset/british/Alphabets/E.jpg","asset/british/Alphabets/F.jpg","asset/british/Alphabets/G.jpg",
   "asset/british/Alphabets/H.jpg","asset/british/Alphabets/I.jpg","asset/british/Alphabets/J.jpg","asset/british/Alphabets/K.jpg",
   "asset/british/Alphabets/L.jpg","asset/british/Alphabets/M.jpg","asset/british/Alphabets/N.jpg","asset/british/Alphabets/O.jpg",
