@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:sign_vision/utils/colors.dart';
+import '../../../../hom_page/learnerpage.dart';
 import '../../australian/alphabets/utils.dart';
 
 class AustralianAlphabets extends StatefulWidget {
@@ -12,6 +15,9 @@ class _AustralianAlphabetsState extends State<AustralianAlphabets> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(onPressed: ()=>Get.to(Learning()), icon: Icon(Icons.arrow_back)),
+      ),
       backgroundColor: MyColors.kblueColor,
       body: Padding(
         padding: const EdgeInsets.all(18.0),

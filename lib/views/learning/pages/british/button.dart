@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sign_vision/utils/colors.dart';
+import 'package:sign_vision/views/hom_page/home.dart';
 import 'package:sign_vision/views/learning/pages/british/alphabets/alphabets.dart';
 import 'package:sign_vision/views/learning/pages/british/numbers/numbers.dart';
 
@@ -9,6 +10,9 @@ class AslButton2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: BackButton(color: Colors.black,onPressed: ()=> HomePage(),),
+      ),
       backgroundColor: MyColors.kblueColor,
       body: Column(mainAxisAlignment: MainAxisAlignment.center,
         children: [

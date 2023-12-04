@@ -1,6 +1,8 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:http/http.dart' as http;
 import 'package:image_picker/image_picker.dart';
 import 'package:sign_vision/utils/colors.dart';
@@ -66,7 +68,7 @@ class _UploadScreenState extends State<UploadScreen> {
     return Scaffold(
       backgroundColor: MyColors.kblueColor,
       appBar: AppBar(
-        leading: IconButton(onPressed: ()=>Navigator.of(context).push(MaterialPageRoute(builder: (context)=>HomePage())) , icon: Icon(Icons.arrow_back),),
+        leading: IconButton(onPressed: ()=>Get.to(HomePage()), icon: Icon(Icons.arrow_back)),
         backgroundColor: MyColors.kblueColor,
         title: Text('Image Upload'),
       ),

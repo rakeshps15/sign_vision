@@ -13,6 +13,9 @@ class AslButton1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: BackButton(color: Colors.black),
+      ),
       backgroundColor: MyColors.kblueColor,
       body: Column(mainAxisAlignment: MainAxisAlignment.center,
         children: [

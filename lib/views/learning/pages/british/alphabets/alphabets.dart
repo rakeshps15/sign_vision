@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:sign_vision/utils/colors.dart';
+import 'package:sign_vision/views/hom_page/learnerpage.dart';
 import '../../british/alphabets/utils.dart';
 
 class BritishAlpabhabets extends StatefulWidget {
@@ -11,6 +14,7 @@ class _BritishAlpabhabetsState extends State<BritishAlpabhabets> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(leading: IconButton(onPressed: ()=>Get.to(Learning()), icon: Icon(Icons.arrow_back)),),
       backgroundColor: MyColors.kblueColor,
       body: Padding(
         padding: const EdgeInsets.all(18.0),
