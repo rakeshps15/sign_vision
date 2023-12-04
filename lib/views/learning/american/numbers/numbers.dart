@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:sign_vision/utils/colors.dart';
-import '../alphabets/utils.dart';
+import '../../american/numbers/utils.dart';
+
+void main()
+{
+  runApp(MaterialApp(home: AmericanNumbers(),));
+}
 
 class AmericanNumbers extends StatefulWidget {
   @override
