@@ -78,6 +78,9 @@ flutter:
     - asset/american/Alphabets/
     - asset/american/Numbers/
     - asset/british/Alphabets/
+    - asset/british/Numbers/
+    - asset/Australian/Alphabets/
+    - asset/Australian/Numbers/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

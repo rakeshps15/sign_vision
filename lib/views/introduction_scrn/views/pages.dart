@@ -5,14 +5,14 @@ import '../../../utils/colors.dart';
 import '../model/model_page.dart';
 import 'components.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+class Intro extends StatefulWidget {
+  const Intro({Key? key}) : super(key: key);
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<Intro> createState() => _IntroState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _IntroState extends State<Intro> {
   PageController pageController = PageController(initialPage: 0);
   int currentIndex = 0;
 

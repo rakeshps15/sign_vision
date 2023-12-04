@@ -2,7 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sign_vision/utils/colors.dart';
+import 'package:sign_vision/views/hom_page/components/drawer/drawer.dart';
 import 'package:sign_vision/views/hom_page/upload.dart';
+import 'package:sign_vision/views/hom_page/learnerpage.dart';
 import 'package:sign_vision/views/signing_page/login/login.dart';
 import 'components/drawer/settings.dart';
 
@@ -29,85 +31,7 @@ class _HomePageState extends State<HomePage> {
         elevation: 0,
       ),
 
-      drawer: Drawer(
-        backgroundColor: MyColors.kGreyColor,
-        child: ListView(
-          children: [
-
-            UserAccountsDrawerHeader(
-              decoration: const BoxDecoration(
-                color: MyColors.klblueColor,
-                image: DecorationImage(
-                  fit: BoxFit.fill,
-
-                  colorFilter: ColorFilter.linearToSrgbGamma(),
-                  image: AssetImage("asset/main.png"),
-                ),
-              ),
-              accountName: const Text(
-                "My Name",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: Colors.white70),
-              ),
-              accountEmail: const Text("myname@gmail.com",style: TextStyle(color: Colors.white70),),
-              currentAccountPicture:
-              Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Stack(
-                      children: [
-                        CircleAvatar(
-                          backgroundColor: Colors.black26,
-                          backgroundImage: AssetImage(
-                              "asset/main.png"),
-                          radius: 30,
-                        ),
-                        Positioned(child: IconButton(
-                            onPressed: () {},
-                            icon: Icon(Icons.add_a_photo)),
-                          bottom: -10,
-                          left: 80,
-                        )
-                      ]
-                  ),
-                ],
-              ),
-            ),
-
-            ListTile(
-              leading: Icon(Icons.home,color: Colors.white70,),
-              title: Text("Home", style: TextStyle(fontSize: 18,color: Colors.white70),),
-              onTap: () => Navigator.of(context).pop(),
-            ),
-
-            ListTile(
-                leading: Icon(Icons.book_online,color: Colors.white70,),
-                title: Text("How to use", style: TextStyle(fontSize: 18,color: Colors.white70),),
-                onTap: () =>
-                    Navigator.of(context).push(
-                        MaterialPageRoute(builder: (context) => Login()))),
-
-
-            ListTile(
-              leading: Icon(Icons.settings,color: Colors.white70,),
-              title: Text("Settings", style: TextStyle(fontSize: 18,color: Colors.white70),),
-              onTap: () =>
-                  Navigator.of(context).push(MaterialPageRoute
-                    (builder: (context) => SettingsPage())),
-            ),
-
-            ListTile(
-              leading: Icon(Icons.logout,color: Colors.white70,),
-              title: Text("Signout", style: TextStyle(fontSize: 18,color: Colors.white70),),
-              onTap: () =>
-                  Navigator.of(context).push(MaterialPageRoute
-                    (builder: (context) => Login())),
-            ),
-          ],
-        ),
-      ),
-
-
-
+      drawer: DrawerEx(),
       backgroundColor: MyColors.kblueColor,
       body: ListView(
         physics: NeverScrollableScrollPhysics(),
@@ -215,15 +139,17 @@ class _HomePageState extends State<HomePage> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              Container(
-                                padding: EdgeInsets.all(15),
-                                decoration: BoxDecoration(
-                                  // color: ,
-                                    shape: BoxShape.circle),
-                                child: Icon(
-                                  Icons.app_registration,
-                                  size: 70,
-                                  // color: Colors.white,
+                              GestureDetector(
+                                child: Container(
+                                  padding: EdgeInsets.all(15),
+                                  decoration: BoxDecoration(
+                                    // color: ,
+                                      shape: BoxShape.circle),
+                                  child: Icon(
+                                    Icons.app_registration,
+                                    size: 70,
+                                    // color: Colors.white,
+                                  ),
                                 ),
                               ),
                               SizedBox(height: 5),
@@ -260,15 +186,18 @@ class _HomePageState extends State<HomePage> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          Container(
-                            padding: EdgeInsets.all(15),
-                            decoration: BoxDecoration(
-                              // color: ,
-                                shape: BoxShape.circle),
-                            child: Icon(
-                              Icons.pan_tool_alt_sharp,
-                              size: 70,
-                              // color: Colors.white,
+                          GestureDetector(
+                            onTap: () => Navigator.pushReplacement(context, (MaterialPageRoute(builder: (context)=> Learning()))),
+                            child: Container(
+                              padding: EdgeInsets.all(15),
+                              decoration: BoxDecoration(
+                                // color: ,
+                                  shape: BoxShape.circle),
+                              child: Icon(
+                                Icons.pan_tool_alt_sharp,
+                                size: 70,
+                                // color: Colors.white,
+                              ),
                             ),
                           ),
                           SizedBox(height: 5),

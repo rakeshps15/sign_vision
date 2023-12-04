@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:sign_vision/utils/colors.dart';
-import '../../british/numbers/utils.dart';
+import '../../australian/alphabets/utils.dart';
 
-
-class BritishNumbers extends StatefulWidget {
+class AustralianNumbers extends StatefulWidget {
   @override
-  State<BritishNumbers> createState() => _BritishNumbersState();
+  State<AustralianNumbers> createState() => _AustralianNumbersState();
 }
 
-class _BritishNumbersState extends State<BritishNumbers> {
+class _AustralianNumbersState extends State<AustralianNumbers> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

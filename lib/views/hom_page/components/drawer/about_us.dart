@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(About());
-}
-
-
 class About extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

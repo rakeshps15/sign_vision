@@ -3,11 +3,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sign_vision/views/hom_page/home.dart';
 import '../registration/registration.dart';
 
-void main(){
-  runApp(MaterialApp(home: Login(),));
-}
-
-
 class Login extends StatefulWidget {
   @override
   State<Login> createState() => _LoginState();
@@ -15,8 +10,8 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   bool passwordvisibility = true;
-  final uname = TextEditingController();
-  final pass = TextEditingController();
+  TextEditingController uname = TextEditingController();
+  TextEditingController pass = TextEditingController();
   late SharedPreferences preferences;
   late bool newuser;
 
@@ -27,7 +22,7 @@ class _LoginState extends State<Login> {
   }
 
   void check_if_user_already_login() async{
-    preferences = await SharedPreferences.getInstance()!;
+    preferences = await SharedPreferences.getInstance();
     newuser = preferences.getBool('newuser') ?? true;
     if(newuser == false){
       Navigator.push(context, MaterialPageRoute(
@@ -96,7 +91,7 @@ class _LoginState extends State<Login> {
                               icon: Icon(passwordvisibility == true
                                   ? Icons.visibility_off_sharp
                                   : Icons.visibility)),
-                          border: OutlineInputBorder(),
+                          border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
                           prefixIcon: Icon(Icons.lock),
                           hintText: "Password"),
                       validator: (pass) {
@@ -118,32 +113,41 @@ class _LoginState extends State<Login> {
                   child: const Text("LOGIN"),
                   ),
                 ),
-                TextButton(
-                    onPressed: () {
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => Signup()));
-                    },
-                    child: Text("New User ? Sign Up")),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("New User??"),
+                    TextButton(
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => Signup()));},
+                        child: Text(" Sign Up")),
+                  ],
+                ),
               ],
             ),
           ),
         ));
   }
   void validateandLogin() async {
-    preferences = await SharedPreferences.getInstance()!;
-    String storedusername = preferences.getString('uname')!;
-    String storedpassword = preferences.getString('pass')!;
+    preferences = await SharedPreferences.getInstance();
+    String regname = preferences.getString('uname')??"";
+    String regpassword = preferences.getString('pass')??"";
 
-    String username = uname.text;
-    String pwd    = pass.text;
+    String username = uname.text.trim();
+    String pwd    = pass.text.trim();
     preferences.setBool('newuser', false);
-
-    if (storedusername == username && storedpassword == pwd) {
-      Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => Signup()));
-    } else {
+    if(username.isNotEmpty&&pwd.isNotEmpty) {
+      if (regname == username && regpassword == pwd) {
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => HomePage()));
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text("Invalid username or password")));
+      }
+    }else{
       ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text("Invalid username or password")));
+          const SnackBar(content: Text("fields are required")));
     }
   }
 }

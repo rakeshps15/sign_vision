@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../../../utils/colors.dart';
 import '../../signing_page/option/main_option.dart';
 
-
 class GetStartBtn extends StatefulWidget {
   const GetStartBtn({
     Key? key,

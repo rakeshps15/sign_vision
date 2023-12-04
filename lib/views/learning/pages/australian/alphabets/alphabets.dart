@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:sign_vision/utils/colors.dart';
-import '../../british/alphabets/utils.dart';
+import '../../australian/alphabets/utils.dart';
 
-void main(){
-  runApp(MaterialApp(home: BritishAlpabhabets(),));
-}
+class AustralianAlphabets extends StatefulWidget {
 
-class BritishAlpabhabets extends StatefulWidget {
   @override
-  State<BritishAlpabhabets> createState() => _BritishAlpabhabetsState();
+  State<AustralianAlphabets> createState() => _AustralianAlphabetsState();
 }
 
-class _BritishAlpabhabetsState extends State<BritishAlpabhabets> {
+class _AustralianAlphabetsState extends State<AustralianAlphabets> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +24,7 @@ class _BritishAlpabhabetsState extends State<BritishAlpabhabets> {
             return Container(
               height: 20,
               decoration: BoxDecoration(color: Colors.white,
-                borderRadius: BorderRadius.circular(30),image:DecorationImage(image: AssetImage(images[index],),fit: BoxFit.contain),
+                borderRadius: BorderRadius.circular(30),image:DecorationImage(image: AssetImage(images[index])),
                 // image: DecorationImage(
                 //     image: NetworkImage(images[index]))
               ),

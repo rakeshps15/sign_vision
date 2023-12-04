@@ -4,19 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:image_picker/image_picker.dart';
 import 'package:sign_vision/utils/colors.dart';
-
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: UploadScreen(),
-    );
-  }
-}
+import 'package:sign_vision/views/hom_page/home.dart';
 
 class UploadScreen extends StatefulWidget {
   @override
@@ -78,6 +66,7 @@ class _UploadScreenState extends State<UploadScreen> {
     return Scaffold(
       backgroundColor: MyColors.kblueColor,
       appBar: AppBar(
+        leading: IconButton(onPressed: ()=>Navigator.of(context).push(MaterialPageRoute(builder: (context)=>HomePage())) , icon: Icon(Icons.arrow_back),),
         backgroundColor: MyColors.kblueColor,
         title: Text('Image Upload'),
       ),

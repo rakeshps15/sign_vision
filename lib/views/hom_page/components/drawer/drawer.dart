@@ -6,6 +6,7 @@ import 'package:sign_vision/views/signing_page/option/main_option.dart';
 import '../../../../utils/colors.dart';
 import '../../../introduction_scrn/views/pages.dart';
 import '../../../signing_page/login/login.dart';
+import '../../home.dart';
 import 'about_us.dart';
 
 class DrawerEx extends StatefulWidget {
@@ -16,29 +17,19 @@ class DrawerEx extends StatefulWidget {
 class _DrawerExState extends State<DrawerEx> {
   late SharedPreferences preferences;
   late String username;
-
   @override
   void initState() {
-    fetchData(); // when the second page loads this method will execute
+    logoutfunction();
     super.initState();
   }
 
-  void fetchData() async {
+  void logoutfunction() async{
     preferences = await SharedPreferences.getInstance();
-    setState(() {
-      username = preferences
-          .getString('uname')!; // fetch the value from shared preferences
-    });
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: MyColors.kyellowcolor,
-        elevation: 0,
-      ),
-      drawer: Drawer(
+    return Drawer(
         backgroundColor: MyColors.kGreyColor,
         child: ListView(
           children: [
@@ -54,27 +45,6 @@ class _DrawerExState extends State<DrawerEx> {
               onTap: () => Navigator.of(context).pop(),
             ),
             ListTile(
-              leading: Icon(Icons.lock_outline, color: Colors.white70),
-              title: Text("Permission",
-                  style: TextStyle(fontSize: 18, color: Colors.white70)),
-              onTap: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => About())),
-            ),
-            ListTile(
-              leading: Icon(Icons.back_hand_outlined, color: Colors.white70),
-              title: Text("Sign Language",
-                  style: TextStyle(fontSize: 18, color: Colors.white70)),
-              onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => SettingsPage())),
-            ),
-            ListTile(
-              leading: Icon(Icons.help, color: Colors.white70),
-              title: Text("Help",
-                  style: TextStyle(fontSize: 18, color: Colors.white70)),
-              onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => SettingsPage())),
-            ),
-            ListTile(
               leading: Icon(Icons.phone_android, color: Colors.white70),
               title: Text("About Us",
                   style: TextStyle(fontSize: 18, color: Colors.white70)),
@@ -82,19 +52,25 @@ class _DrawerExState extends State<DrawerEx> {
                   .push(MaterialPageRoute(builder: (context) => About())),
             ),
             ListTile(
+              leading: Icon(Icons.help, color: Colors.white70),
+              title: Text("Settings",
+                  style: TextStyle(fontSize: 18, color: Colors.white70)),
+              onTap: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => SettingsPage())),
+            ),
+            ListTile(
               leading: Icon(Icons.logout, color: Colors.white70),
               title: Text("Signout",
                   style: TextStyle(fontSize: 18, color: Colors.white70)),
               onTap: () {
-                // preferences.setBool('newuser', true);
+                preferences.setBool('newuser', true);
+                Navigator.of(context).pop();
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (context) => MainUi()));
               },
             )
           ],
         ),
-      ),
-      body: HomePage(),
     );
   }
 }

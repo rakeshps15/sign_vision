@@ -1,18 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:sign_vision/utils/colors.dart';
-import '../../american/numbers/utils.dart';
+import '../../american/alphabets/utils.dart';
 
-void main()
-{
-  runApp(MaterialApp(home: AmericanNumbers(),));
-}
+class AmericanAlphabets extends StatefulWidget {
 
-class AmericanNumbers extends StatefulWidget {
   @override
-  State<AmericanNumbers> createState() => _AmericanNumbersState();
+  State<AmericanAlphabets> createState() => _AmericanAlphabetsState();
 }
 
-class _AmericanNumbersState extends State<AmericanNumbers> {
+class _AmericanAlphabetsState extends State<AmericanAlphabets> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +38,7 @@ class _AmericanNumbersState extends State<AmericanNumbers> {
               ),
             );
           },
-          itemCount: 10,
+          itemCount: 26,
         ),
       ),
     );
