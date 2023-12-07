@@ -182,7 +182,7 @@ class _LearningState extends State<Learning> {
                   ),
                   // SizedBox(height: 5),
                   Text(
-                    "Auslan",
+                    "Australian",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 21, letterSpacing: 1.1),

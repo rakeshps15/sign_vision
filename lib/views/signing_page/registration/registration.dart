@@ -128,6 +128,7 @@ class _SignupState extends State<Signup> {
                 SizedBox(height: 40,),
                 ElevatedButton(
                     style: ButtonStyle(
+                      backgroundColor: MaterialStatePropertyAll(Colors.blue[900]),
                         minimumSize: MaterialStateProperty.all(const Size(330, 50)),
                         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
@@ -136,7 +137,7 @@ class _SignupState extends State<Signup> {
                     onPressed: () => storedata(),
                     child: const Text(
                       "Sign Up",
-                      style: TextStyle(color: Colors.black),
+                      style: TextStyle(color: Colors.white),
                     )),
                 SizedBox(height: 10,),
                 Row(

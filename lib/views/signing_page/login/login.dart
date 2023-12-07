@@ -103,12 +103,14 @@ class _LoginState extends State<Login> {
                     )),
                 Padding(
                   padding: const EdgeInsets.all(20.0),
-                  child: MaterialButton(
-                    color: Colors.pink,
-                    textColor: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
-                    ),
+                  child: ElevatedButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStatePropertyAll(Colors.blue[900]),
+                        minimumSize: MaterialStateProperty.all(const Size(330, 50)),
+                        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                            RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(30.0),
+                            ))),
                       onPressed: () => validateandLogin(),
                   child: const Text("LOGIN"),
                   ),

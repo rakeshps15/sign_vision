@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:sign_vision/views/hom_page/components/drawer/settings.dart';
+import 'package:sign_vision/views/hom_page/components/drawer/termsandconditions.dart';
 import 'package:sign_vision/views/signing_page/option/main_option.dart';
 import '../../../../utils/colors.dart';
-import '../../../introduction_scrn/views/pages.dart';
-import '../../../signing_page/login/login.dart';
-import '../../home.dart';
 import 'about_us.dart';
 
 class DrawerEx extends StatefulWidget {
@@ -34,9 +30,6 @@ class _DrawerExState extends State<DrawerEx> {
         child: ListView(
           children: [
             Padding(padding: EdgeInsets.all(10)),
-            // Removed UserAccountsDrawerHeader
-
-            // Add other items in the drawer
 
             ListTile(
               leading: Icon(Icons.home, color: Colors.white70),
@@ -45,18 +38,18 @@ class _DrawerExState extends State<DrawerEx> {
               onTap: () => Navigator.of(context).pop(),
             ),
             ListTile(
-              leading: Icon(Icons.phone_android, color: Colors.white70),
+              leading: Icon(Icons.policy, color: Colors.white70),
               title: Text("About Us",
                   style: TextStyle(fontSize: 18, color: Colors.white70)),
               onTap: () => Navigator.of(context)
                   .push(MaterialPageRoute(builder: (context) => About())),
             ),
             ListTile(
-              leading: Icon(Icons.help, color: Colors.white70),
-              title: Text("Settings",
+              leading: Icon(Icons.speaker_notes, color: Colors.white70),
+              title: Text("Terms and Conditions",
                   style: TextStyle(fontSize: 18, color: Colors.white70)),
               onTap: () => Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => SettingsPage())),
+                  MaterialPageRoute(builder: (context) => TermsAndConditionsScreen())),
             ),
             ListTile(
               leading: Icon(Icons.logout, color: Colors.white70),

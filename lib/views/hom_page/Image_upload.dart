@@ -81,30 +81,17 @@ class _UploadScreenState extends State<UploadScreen> {
                   ? Text('No image selected.', style: TextStyle(color: Colors.white),)
                   : Image.file(
                 _image!,
-                fit: BoxFit.cover,
+                fit: BoxFit.fitHeight,
 
               ),
             ),
-
             SizedBox(height: 30),
-            ElevatedButton(
-              onPressed: getImage,
-              child: Text('Select Image'),
-            ),
-            SizedBox(height: 25),
-            ElevatedButton(
-              onPressed: () async {
-                await   uploadImage();
-              },
-              child: Text('Upload Image'),
-            ),
-            SizedBox(height: 20),
-            SizedBox(height: 20),
+
 
             Container(
               decoration: BoxDecoration(
-                color: Colors.grey[300],
-                borderRadius: BorderRadius.circular(12)
+                  color: Colors.grey[300],
+                  borderRadius: BorderRadius.circular(12)
               ),
               alignment: Alignment.center,
               height: 60,
@@ -112,7 +99,28 @@ class _UploadScreenState extends State<UploadScreen> {
               child: prediction != null
                   ? Text('$prediction',style: TextStyle(fontSize: 26,fontWeight: FontWeight.bold),)
                   : Text('Prediction will appear here'),
-            )
+            ),
+            SizedBox(height: 20),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+
+                  onPressed: getImage,
+                  child: Text('Select Image'),
+                ),
+            SizedBox(width: 50,),
+            ElevatedButton(
+              onPressed: () async {
+                await   uploadImage();
+              },
+              child: Text('Upload Image'),
+            ),
+              ],
+            ),
+
+
           ],
         ),
       ),
