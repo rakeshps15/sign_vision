@@ -16,6 +16,7 @@ class _AustralianNumbersState extends State<AustralianNumbers> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         leading: IconButton(onPressed: ()=>Get.to(AslButton2()), icon: Icon(Icons.arrow_back)),
         backgroundColor: MyColors.kblueColor,
       ),

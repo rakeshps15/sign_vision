@@ -16,6 +16,7 @@ class _AmericanNumbersState extends State<AmericanNumbers> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         leading: IconButton(onPressed: ()=>Get.to(AslButton1()), icon: Icon(Icons.arrow_back)),
         backgroundColor: MyColors.kblueColor,
       ),

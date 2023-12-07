@@ -15,7 +15,11 @@ class _BritishAlpabhabetsState extends State<BritishAlpabhabets> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(leading: IconButton(onPressed: ()=>Get.to(AslButton3()), icon: Icon(Icons.arrow_back)),),
+      appBar: AppBar(
+        backgroundColor: MyColors.kblueColor,
+        elevation: 0,
+        leading: IconButton(onPressed: ()=>Get.to(AslButton3()), icon: Icon(Icons.arrow_back)),
+      ),
       backgroundColor: MyColors.kblueColor,
       body: Padding(
         padding: const EdgeInsets.all(18.0),

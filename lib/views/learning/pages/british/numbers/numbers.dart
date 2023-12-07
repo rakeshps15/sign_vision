@@ -17,8 +17,9 @@ class _BritishNumbersState extends State<BritishNumbers> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(onPressed: ()=>Get.to(AslButton3()), icon: Icon(Icons.arrow_back)),
         backgroundColor: MyColors.kblueColor,
+        elevation: 0,
+        leading: IconButton(onPressed: ()=>Get.to(AslButton3()), icon: Icon(Icons.arrow_back)),
       ),
       backgroundColor: MyColors.kblueColor,
       body: Padding(

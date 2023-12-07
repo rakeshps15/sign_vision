@@ -41,11 +41,8 @@ class _UploadScreenState extends State<UploadScreen> {
       request.files.add(image);
 
       try {
-        // Send the request
         var response = await request.send();
-        // Check the status code of the response
         if (response.statusCode == 200) {
-          // Request successful, do something with the response
           print('Image uploaded successfully!');
           final Map<String, dynamic> responseData = json.decode(await response.stream.bytesToString());
           print('Response Data: $responseData');
@@ -54,11 +51,9 @@ class _UploadScreenState extends State<UploadScreen> {
           });
           return responseData['index'];
         } else {
-          // Request failed
           print('Failed to upload image. Status code: ${response.statusCode}');
         }
       } catch (e) {
-        // Error occurred during the request
         print('Error uploading image: $e');
       } }
   }

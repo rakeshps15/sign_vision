@@ -20,13 +20,15 @@ class _LearningState extends State<Learning> {
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: MyColors.kblueColor,
       appBar: AppBar(
+        backgroundColor: MyColors.kblueColor,
+        elevation: 0,
         leading: IconButton(onPressed: ()=>Get.to(HomePage()), icon: Icon(Icons.arrow_back)),),
       body: Padding(
         padding: EdgeInsets.symmetric(vertical: 70, horizontal: 20),
         child: Column(mainAxisAlignment: MainAxisAlignment.start,
           children: [
 
-            Row(mainAxisAlignment: MainAxisAlignment.start,
+            Row(mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
                   'Language Learning',
@@ -180,7 +182,7 @@ class _LearningState extends State<Learning> {
                   ),
                   // SizedBox(height: 5),
                   Text(
-                    "International",
+                    "Auslan",
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 21, letterSpacing: 1.1),

@@ -3,10 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sign_vision/utils/colors.dart';
 import 'package:sign_vision/views/hom_page/components/drawer/drawer.dart';
-import 'package:sign_vision/views/hom_page/upload.dart';
+import 'package:sign_vision/views/hom_page/Image_upload.dart';
 import 'package:sign_vision/views/hom_page/learnerpage.dart';
-import 'package:sign_vision/views/signing_page/login/login.dart';
-import 'components/drawer/settings.dart';
+import 'package:sign_vision/views/hom_page/text_upload.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key});
@@ -140,6 +139,7 @@ class _HomePageState extends State<HomePage> {
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               GestureDetector(
+                                onTap: () => Navigator.pushReplacement(context, (MaterialPageRoute(builder: (context)=> ImageDisplayScreen()))),
                                 child: Container(
                                   padding: EdgeInsets.all(15),
                                   decoration: BoxDecoration(

@@ -17,6 +17,7 @@ class _AustralianAlphabetsState extends State<AustralianAlphabets> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         leading: IconButton(onPressed: ()=>Get.to(AslButton2()), icon: Icon(Icons.arrow_back)),
         backgroundColor: MyColors.kblueColor,
       ),

@@ -13,6 +13,8 @@ class AslButton3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: MyColors.kblueColor,
+        elevation: 0,
         leading: IconButton(onPressed: ()=>Get.to(Learning()), icon: Icon(Icons.arrow_back)),
       ),
       backgroundColor: MyColors.kblueColor,
