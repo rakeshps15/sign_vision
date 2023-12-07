@@ -29,7 +29,7 @@ class _SplashState extends State<Splash> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Center(
-            child: Image.asset('asset/logo.png'),
+            child: Image.asset('asset/logo.png',height: 200,width: 150,),
           ),
           SizedBox(height: 40,),
           Text("Welcome",style: TextStyle(fontSize: 50,fontStyle: FontStyle.italic,color: MyColors.titleTextColor))

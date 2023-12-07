@@ -1,25 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:sign_vision/utils/colors.dart';
-import 'package:sign_vision/views/learning/pages/american/button.dart';
-import '../../../../hom_page/learnerpage.dart';
-import '../../american/alphabets/utils.dart';
+import 'package:sign_vision/views/learning/pages/australian/button.dart';
+import '../../british/alphabets/utils_3.dart';
 
-class AmericanAlphabets extends StatefulWidget {
-
+class BritishAlpabhabets extends StatefulWidget {
   @override
-  State<AmericanAlphabets> createState() => _AmericanAlphabetsState();
+  State<BritishAlpabhabets> createState() => _BritishAlpabhabetsState();
 }
 
-class _AmericanAlphabetsState extends State<AmericanAlphabets> {
+class _BritishAlpabhabetsState extends State<BritishAlpabhabets> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
-        leading: IconButton(onPressed: ()=>Get.to(AslButton1()), icon: Icon(Icons.arrow_back)),
         backgroundColor: MyColors.kblueColor,
+        elevation: 0,
+        leading: IconButton(onPressed: ()=>Get.to(AslButton3()), icon: Icon(Icons.arrow_back)),
       ),
       backgroundColor: MyColors.kblueColor,
       body: Padding(
@@ -33,7 +31,7 @@ class _AmericanAlphabetsState extends State<AmericanAlphabets> {
             return Container(
               height: 20,
               decoration: BoxDecoration(color: Colors.white,
-                borderRadius: BorderRadius.circular(30),image:DecorationImage(image: AssetImage(images[index])),
+                borderRadius: BorderRadius.circular(30),image:DecorationImage(image: AssetImage(images[index],),fit: BoxFit.contain),
                 // image: DecorationImage(
                 //     image: NetworkImage(images[index]))
               ),

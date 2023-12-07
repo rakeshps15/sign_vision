@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:sign_vision/utils/colors.dart';
 import '../../../hom_page/learnerpage.dart';
-import 'alphabets/alphabets.dart';
-import 'numbers/numbers.dart';
+import 'alphabets/alphabets_2.dart';
+import 'numbers/numbers_2.dart';
 
 class AslButton3 extends StatelessWidget {
   const AslButton3({super.key});

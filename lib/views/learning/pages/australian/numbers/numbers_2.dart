@@ -3,16 +3,14 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:sign_vision/utils/colors.dart';
 import 'package:sign_vision/views/learning/pages/british/button.dart';
-import '../../../../hom_page/learnerpage.dart';
-import '../../australian/alphabets/utils.dart';
+import '../../australian/alphabets/utils_2.dart';
 
-class AustralianAlphabets extends StatefulWidget {
-
+class AustralianNumbers extends StatefulWidget {
   @override
-  State<AustralianAlphabets> createState() => _AustralianAlphabetsState();
+  State<AustralianNumbers> createState() => _AustralianNumbersState();
 }
 
-class _AustralianAlphabetsState extends State<AustralianAlphabets> {
+class _AustralianNumbersState extends State<AustralianNumbers> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +45,7 @@ class _AustralianAlphabetsState extends State<AustralianAlphabets> {
               ),
             );
           },
-          itemCount: 26,
+          itemCount: 10,
         ),
       ),
     );

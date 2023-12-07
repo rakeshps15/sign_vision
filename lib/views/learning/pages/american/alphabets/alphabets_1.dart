@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/get_navigation.dart';
 import 'package:sign_vision/utils/colors.dart';
-import 'package:sign_vision/views/hom_page/learnerpage.dart';
-import 'package:sign_vision/views/learning/pages/australian/button.dart';
-import '../../british/alphabets/utils.dart';
+import 'package:sign_vision/views/learning/pages/american/button.dart';
+import '../../american/alphabets/utils_1.dart';
 
-class BritishAlpabhabets extends StatefulWidget {
+class AmericanAlphabets extends StatefulWidget {
+
   @override
-  State<BritishAlpabhabets> createState() => _BritishAlpabhabetsState();
+  State<AmericanAlphabets> createState() => _AmericanAlphabetsState();
 }
 
-class _BritishAlpabhabetsState extends State<BritishAlpabhabets> {
+class _AmericanAlphabetsState extends State<AmericanAlphabets> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: MyColors.kblueColor,
         elevation: 0,
-        leading: IconButton(onPressed: ()=>Get.to(AslButton3()), icon: Icon(Icons.arrow_back)),
+        leading: IconButton(onPressed: ()=>Get.to(AslButton1()), icon: Icon(Icons.arrow_back)),
+        backgroundColor: MyColors.kblueColor,
       ),
       backgroundColor: MyColors.kblueColor,
       body: Padding(
@@ -32,7 +32,7 @@ class _BritishAlpabhabetsState extends State<BritishAlpabhabets> {
             return Container(
               height: 20,
               decoration: BoxDecoration(color: Colors.white,
-                borderRadius: BorderRadius.circular(30),image:DecorationImage(image: AssetImage(images[index],),fit: BoxFit.contain),
+                borderRadius: BorderRadius.circular(30),image:DecorationImage(image: AssetImage(images[index])),
                 // image: DecorationImage(
                 //     image: NetworkImage(images[index]))
               ),
@@ -52,5 +52,4 @@ class _BritishAlpabhabetsState extends State<BritishAlpabhabets> {
     );
   }
 }
-
 

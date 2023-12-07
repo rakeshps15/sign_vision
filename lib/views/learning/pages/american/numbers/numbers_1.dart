@@ -2,24 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:sign_vision/utils/colors.dart';
-import 'package:sign_vision/views/hom_page/learnerpage.dart';
-import 'package:sign_vision/views/learning/pages/australian/button.dart';
-import '../../../../hom_page/home.dart';
-import '../../british/numbers/utils.dart';
+import 'package:sign_vision/views/learning/pages/american/button.dart';
+import '../../american/numbers/utils_n1.dart';
 
-class BritishNumbers extends StatefulWidget {
+class AmericanNumbers extends StatefulWidget {
   @override
-  State<BritishNumbers> createState() => _BritishNumbersState();
+  State<AmericanNumbers> createState() => _AmericanNumbersState();
 }
 
-class _BritishNumbersState extends State<BritishNumbers> {
+class _AmericanNumbersState extends State<AmericanNumbers> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: MyColors.kblueColor,
         elevation: 0,
-        leading: IconButton(onPressed: ()=>Get.to(AslButton3()), icon: Icon(Icons.arrow_back)),
+        leading: IconButton(onPressed: ()=>Get.to(AslButton1()), icon: Icon(Icons.arrow_back)),
+        backgroundColor: MyColors.kblueColor,
       ),
       backgroundColor: MyColors.kblueColor,
       body: Padding(
@@ -53,5 +51,4 @@ class _BritishNumbersState extends State<BritishNumbers> {
     );
   }
 }
-
 
