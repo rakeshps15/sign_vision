@@ -65,27 +65,27 @@ class _UploadScreenState extends State<UploadScreen> {
       appBar: AppBar(
         leading: IconButton(onPressed: ()=>Get.to(HomePage()), icon: Icon(Icons.arrow_back)),
         backgroundColor: MyColors.kblueColor,
-        title: Text('Image Upload'),
+        title: Text('Image Upload',),
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-
+            SizedBox(height: 60,),
             Container(
               alignment: Alignment.center,
-              height: 250,
-              width: 190,
+              height: 420,
+              width: 300,
               color: Color.fromARGB(255, 32, 63, 88),
               child: _image == null
-                  ? Text('No image selected.', style: TextStyle(color: Colors.white),)
+                  ? Icon(Icons.add_a_photo,size: 120, color: Colors.white,)
                   : Image.file(
                 _image!,
                 fit: BoxFit.fitHeight,
 
               ),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 40),
 
 
             Container(
@@ -100,18 +100,30 @@ class _UploadScreenState extends State<UploadScreen> {
                   ? Text('$prediction',style: TextStyle(fontSize: 26,fontWeight: FontWeight.bold),)
                   : Text('Prediction will appear here'),
             ),
-            SizedBox(height: 20),
-            SizedBox(height: 20),
+            SizedBox(height: 40),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
-
+                  style: ButtonStyle(
+                      backgroundColor: MaterialStatePropertyAll(Colors.blue[900]),
+                      minimumSize: MaterialStateProperty.all(const Size(150, 40)),
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30.0),
+                          ))),
                   onPressed: getImage,
                   child: Text('Select Image'),
                 ),
-            SizedBox(width: 50,),
+            SizedBox(width: 45,),
             ElevatedButton(
+              style: ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll(Colors.blue[900]),
+                  minimumSize: MaterialStateProperty.all(const Size(150, 40)),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30.0),
+                      ))),
               onPressed: () async {
                 await   uploadImage();
               },

@@ -49,78 +49,87 @@ class _ImageDisplayScreenState extends State<ImageDisplayScreen> {
         backgroundColor: MyColors.kblueColor,
         title: Text('Text Upload'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: <Widget>[
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: <Widget>[
 
-            SizedBox(height: 25,),
-
-
-            Container(
-              decoration: BoxDecoration(
-                  color: Colors.grey[300],
-                  borderRadius: BorderRadius.circular(5)),
-              child: TextField(
-                controller: _textController,
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(5)
-                    ),
-                    isDense: true,
-                    hintStyle: TextStyle(color: Colors.grey[700],letterSpacing: 1.2, fontWeight: FontWeight.bold),
-                    hintText: 'Enter text',
-                    fillColor: Colors.green),
-              ),
-            ),
-
-
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                _fetchImages(_textController.text);
-              },
-              child: Text('Display'),
-            ),
-            SizedBox(height: 20),
-            Container(
-              color: Colors.black,
-              width: double.infinity,
-              child: Container(height: 180,
-                child: Expanded(
-                  child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: _imagesData.length,
-                    itemBuilder: (context, index) {
-                      return Container(
-                        color: Colors.black,
-                        height: 10,
-                        child: Row(
-                          children: [
-                            Column(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.all(5.0),
-                                  child: Image.memory(
-                                    base64Decode(_imagesData[index]['image_data']),height: 90,
-                                  ),
-                                ),
-
-                                SizedBox(height: 25),
-
-                                Text('${_imagesData[index]['character']}', style: TextStyle(color: Colors.white, fontSize: 22,),),
-
-                              ],
-                            )
-                          ],
+              SizedBox(height: 100,),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 22,),
+                child: Container(
+                  decoration: BoxDecoration(
+                      color: Colors.grey[300],
+                      borderRadius: BorderRadius.circular(5)),
+                  child: TextField(
+                    controller: _textController,
+                    decoration: InputDecoration(
+                        border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(5)
                         ),
-                      );
-                    },
+                        hintStyle: TextStyle(color: Colors.grey[700],letterSpacing: 1.2, fontWeight: FontWeight.bold),
+                        hintText: 'Enter text',
+                        fillColor: Colors.green),
                   ),
                 ),
               ),
-            ),
-          ],
+
+
+              SizedBox(height: 40),
+              ElevatedButton(
+                style: ButtonStyle(
+                    backgroundColor: MaterialStatePropertyAll(Colors.blue[900]),
+                    minimumSize: MaterialStateProperty.all(const Size(200, 40)),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                        ))),
+                onPressed: () {
+                  _fetchImages(_textController.text);
+                },
+                child: Text('Display'),
+              ),
+              SizedBox(height: 120),
+              Container(
+                color: Colors.black,
+                width: double.infinity,
+                child: Container(height: 180,
+                  child: Expanded(
+                    child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: _imagesData.length,
+                      itemBuilder: (context, index) {
+                        return Container(
+                          color: Colors.black,
+                          height: 10,
+                          child: Row(
+                            children: [
+                              Column(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(5.0),
+                                    child: Image.memory(
+                                      base64Decode(_imagesData[index]['image_data']),height: 90,
+                                    ),
+                                  ),
+
+                                  SizedBox(height: 25),
+
+                                  Text('${_imagesData[index]['character']}', style: TextStyle(color: Colors.white, fontSize: 22,),),
+
+                                ],
+                              )
+                            ],
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
