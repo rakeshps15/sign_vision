@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:sign_vision/utils/colors.dart';
-import 'package:sign_vision/views/hom_page/learnerpage.dart';
 import 'package:sign_vision/views/learning/pages/australian/button.dart';
-import '../../../../hom_page/home.dart';
 import '../../british/numbers/utils_n3.dart';
 
 class BritishNumbers extends StatefulWidget {

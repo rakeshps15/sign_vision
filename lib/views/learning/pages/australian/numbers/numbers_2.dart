@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:sign_vision/utils/colors.dart';
 import 'package:sign_vision/views/learning/pages/british/button.dart';
-import '../../australian/alphabets/utils_2.dart';
+import '../../australian/numbers/utils_2.dart';
 
 class AustralianNumbers extends StatefulWidget {
   @override

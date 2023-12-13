@@ -30,6 +30,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+
+  #introduction scrn
   lottie:
   icons_launcher:
   animate_do:
@@ -37,11 +39,11 @@ dependencies:
   smooth_page_indicator:
   google_fonts:
   font_awesome_flutter_named:
-  firebase_core:
-  firebase_auth:
-  firebase_messaging:
-  firebase_storage:
+
+#login & signup
   shared_preferences:
+
+
   get:
   image_picker:
 
@@ -81,8 +83,14 @@ flutter:
     - asset/american/Numbers/
     - asset/british/Alphabets/
     - asset/british/Numbers/
-    - asset/Australian/Alphabets/
-    - asset/Australian/Numbers/
+    - asset/australian/Alphabets/
+    - asset/australian/Numbers/
+    - asset/indian/Alphabets/
+    - asset/indian/Numbers/
+    - asset/International/Alphabets/
+    - asset/International/Numbers/
+    - asset/Italian/Alphabets/
+    - asset/Italian/Numbers/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

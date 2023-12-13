@@ -3,11 +3,9 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:sign_vision/utils/colors.dart';
 import 'package:sign_vision/views/learning/pages/british/button.dart';
-import '../../../../hom_page/learnerpage.dart';
 import '../../australian/alphabets/utils_2.dart';
 
 class AustralianAlphabets extends StatefulWidget {
-
   @override
   State<AustralianAlphabets> createState() => _AustralianAlphabetsState();
 }

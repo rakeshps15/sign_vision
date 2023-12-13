@@ -1,5 +1,5 @@
 var images = [
-  "asset/british/Numbers/Zero.png","asset/british/Numbers/one.png","asset/british/Numbers/Two.png","asset/british/Numbers/Three.png",
-  "asset/british/Numbers/Four.png","asset/british/Numbers/Five.png","asset/british/Numbers/Six.png","asset/british/Numbers/Seven.png",
-  "asset/british/Numbers/Eight.png","asset/british/Numbers/Nine.png","asset/british/Numbers/Ten.png",
+  "asset/british/Numbers/B1.png","asset/british/Numbers/B2.png","asset/british/Numbers/B3.png","asset/british/Numbers/B4.png",
+  "asset/british/Numbers/B5.png","asset/british/Numbers/B6.png","asset/british/Numbers/B7.png","asset/british/Numbers/B8.png",
+  "asset/british/Numbers/B9.png","asset/british/Numbers/B10.png",
 ];

@@ -1,9 +1,9 @@
 var images = [
-  "asset/australian/Alphabets/A.png","asset/australian/Alphabets/B.png","asset/australian/Alphabets/C.png","asset/australian/Alphabets/D.png",
-  "asset/australian/Alphabets/E.png","asset/australian/Alphabets/F.png","asset/australian/Alphabets/G.png","asset/australian/Alphabets/H.png",
-  "asset/australian/Alphabets/I.png","asset/australian/Alphabets/J.png","asset/australian/Alphabets/K.png","asset/australian/Alphabets/L.png",
-  "asset/australian/Alphabets/M.png","asset/australian/Alphabets/N.png","asset/australian/Alphabets/O.png","asset/australian/Alphabets/P.png",
-  "asset/australian/Alphabets/Q.png","asset/australian/Alphabets/R.png","asset/australian/Alphabets/S.png","asset/australian/Alphabets/T.png",
-  "asset/australian/Alphabets/U.png","asset/australian/Alphabets/V.png","asset/australian/Alphabets/W.png","asset/australian/Alphabets/X.png",
-  "asset/australian/Alphabets/Y.png","asset/australian/Alphabets/Z.png",
+  "asset/australian/Alphabets/Aa.png","asset/australian/Alphabets/Ab.png","asset/australian/Alphabets/Ac.png","asset/australian/Alphabets/Ad.png",
+  "asset/australian/Alphabets/Ae.png","asset/australian/Alphabets/Af.png","asset/australian/Alphabets/Ag.png","asset/australian/Alphabets/Ah.png",
+  "asset/australian/Alphabets/Ai.png","asset/australian/Alphabets/Aj.png","asset/australian/Alphabets/Ak.png","asset/australian/Alphabets/Al.png",
+  "asset/australian/Alphabets/Am.png","asset/australian/Alphabets/An.png","asset/australian/Alphabets/Ao.png","asset/australian/Alphabets/Ap.png",
+  "asset/australian/Alphabets/Aq.png","asset/australian/Alphabets/Ar.png","asset/australian/Alphabets/As.png","asset/australian/Alphabets/At.png",
+  "asset/australian/Alphabets/Au.png","asset/australian/Alphabets/Av.png","asset/australian/Alphabets/Aw.png","asset/australian/Alphabets/Ax.png",
+  "asset/australian/Alphabets/Ay.png","asset/australian/Alphabets/Az.png",
 ];
