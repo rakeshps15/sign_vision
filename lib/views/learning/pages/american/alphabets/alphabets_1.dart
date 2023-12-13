@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:sign_vision/utils/colors.dart';
-import 'package:sign_vision/views/learning/pages/american/button.dart';
+import 'package:sign_vision/views/learning/pages/american/button1.dart';
 import '../../american/alphabets/utils_1.dart';
 
 class AmericanAlphabets extends StatefulWidget {
@@ -32,7 +32,7 @@ class _AmericanAlphabetsState extends State<AmericanAlphabets> {
             return Container(
               height: 20,
               decoration: BoxDecoration(color: Colors.white,
-                borderRadius: BorderRadius.circular(30),image:DecorationImage(image: AssetImage(images[index])),
+                borderRadius: BorderRadius.circular(30),image:DecorationImage(image: AssetImage(Aslalphabets[index])),
                 // image: DecorationImage(
                 //     image: NetworkImage(images[index]))
               ),

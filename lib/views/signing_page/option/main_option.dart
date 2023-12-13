@@ -30,7 +30,7 @@ class _MainUi extends State<MainUi> {
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
                       minimumSize: Size(250, 50),
                     ),
-                    child: Text("Login")),
+                    child: Text("Login",style: TextStyle(color: Colors.white),)),
               ),
 
               Padding(
@@ -43,7 +43,7 @@ class _MainUi extends State<MainUi> {
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
                       minimumSize: Size(250, 50),
                     ),
-                    child: Text("Sign Up")),
+                    child: Text("Sign Up",style: TextStyle(color: Colors.white))),
               ),
 
 

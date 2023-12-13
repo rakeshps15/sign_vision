@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:sign_vision/utils/colors.dart';
-import 'package:sign_vision/views/learning/pages/american/button.dart';
+import 'package:sign_vision/views/learning/pages/american/button1.dart';
 import '../../american/numbers/utils_n1.dart';
 
 class AmericanNumbers extends StatefulWidget {
@@ -31,7 +31,7 @@ class _AmericanNumbersState extends State<AmericanNumbers> {
             return Container(
               height: 20,
               decoration: BoxDecoration(color: Colors.white,
-                borderRadius: BorderRadius.circular(30),image:DecorationImage(image: AssetImage(images[index])),
+                borderRadius: BorderRadius.circular(30),image:DecorationImage(image: AssetImage(Aslnumbers[index])),
                 // image: DecorationImage(
                 //     image: NetworkImage(images[index]))
               ),

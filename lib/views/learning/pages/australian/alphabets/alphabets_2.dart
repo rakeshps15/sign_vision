@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:sign_vision/utils/colors.dart';
-import 'package:sign_vision/views/learning/pages/british/button.dart';
 import '../../australian/alphabets/utils_2.dart';
+import '../button2.dart';
 
 class AustralianAlphabets extends StatefulWidget {
   @override
@@ -31,7 +31,7 @@ class _AustralianAlphabetsState extends State<AustralianAlphabets> {
             return Container(
               height: 20,
               decoration: BoxDecoration(color: Colors.white,
-                borderRadius: BorderRadius.circular(30),image:DecorationImage(image: AssetImage(images[index])),
+                borderRadius: BorderRadius.circular(30),image:DecorationImage(image: AssetImage(AusAlphabets[index])),
                 // image: DecorationImage(
                 //     image: NetworkImage(images[index]))
               ),

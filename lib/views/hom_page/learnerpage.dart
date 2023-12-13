@@ -4,9 +4,12 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sign_vision/utils/colors.dart';
 import 'package:sign_vision/views/hom_page/home.dart';
-import 'package:sign_vision/views/learning/pages/american/button.dart';
-import 'package:sign_vision/views/learning/pages/australian/button.dart';
-import 'package:sign_vision/views/learning/pages/british/button.dart';
+import '../learning/pages/american/button1.dart';
+import 'package:sign_vision/views/learning/pages/australian/button2.dart';
+import 'package:sign_vision/views/learning/pages/british/button3.dart';
+import 'package:sign_vision/views/learning/pages/german/button4.dart';
+import 'package:sign_vision/views/learning/pages/indian/button5.dart';
+import 'package:sign_vision/views/learning/pages/international/button6.dart';
 
 class Learning extends StatefulWidget {
   const Learning({super.key});
@@ -111,7 +114,7 @@ class _LearningState extends State<Learning> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         GestureDetector(
-                          onTap: () => Navigator.pushReplacement(context, (MaterialPageRoute(builder: (context)=> AslButton2()))),
+                          onTap: () => Navigator.pushReplacement(context, (MaterialPageRoute(builder: (context)=> AslButton3()))),
                           child: Container(
                               padding: EdgeInsets.all(10),
                               decoration: BoxDecoration(
@@ -158,7 +161,7 @@ class _LearningState extends State<Learning> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         GestureDetector(
-                          onTap: () => Navigator.pushReplacement(context, (MaterialPageRoute(builder: (context)=> AslButton3()))),
+                          onTap: () => Navigator.pushReplacement(context, (MaterialPageRoute(builder: (context)=> AslButton2()))),
 
                           child: Container(
                               padding: EdgeInsets.all(10),
@@ -202,14 +205,14 @@ class _LearningState extends State<Learning> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         GestureDetector(
-                          onTap: () => Navigator.pushReplacement(context, (MaterialPageRoute(builder: (context)=> AslButton2()))),
+                          onTap: () => Navigator.pushReplacement(context, (MaterialPageRoute(builder: (context)=> AslButton5()))),
                           child: Container(
                               padding: EdgeInsets.all(10),
                               decoration: BoxDecoration(
                                 // color: ,
                                   shape: BoxShape.circle),
                               child:
-                              Image.asset("asset/indian.jpg",height: 100,)
+                              Image.asset("asset/indian.png",height: 100,)
                           ),
                         ),
                         Text(
@@ -248,7 +251,7 @@ class _LearningState extends State<Learning> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         GestureDetector(
-                          onTap: () => Navigator.pushReplacement(context, (MaterialPageRoute(builder: (context)=> AslButton3()))),
+                          onTap: () => Navigator.pushReplacement(context, (MaterialPageRoute(builder: (context)=> AslButton4()))),
 
                           child: Container(
                               padding: EdgeInsets.all(10),
@@ -256,12 +259,12 @@ class _LearningState extends State<Learning> {
                                 // color: ,
                                   shape: BoxShape.circle),
                               child:
-                              Image.asset("asset/italian.png", height: 110)
+                              Image.asset("asset/german.png", height: 110)
                           ),
                         ),
                         // SizedBox(height: 5),
                         Text(
-                          "Italian",
+                          "German",
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 21, letterSpacing: 1.1),
@@ -292,14 +295,14 @@ class _LearningState extends State<Learning> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         GestureDetector(
-                          onTap: () => Navigator.pushReplacement(context, (MaterialPageRoute(builder: (context)=> AslButton2()))),
+                          onTap: () => Navigator.pushReplacement(context, (MaterialPageRoute(builder: (context)=> AslButton6()))),
                           child: Container(
                               padding: EdgeInsets.all(10),
                               decoration: BoxDecoration(
                                 // color: ,
                                   shape: BoxShape.circle),
                               child:
-                              Image.asset("asset/international.jpg",height: 100,)
+                              Image.asset("asset/international.png",height: 100,)
                           ),
                         ),
                         Text(

@@ -1,4 +1,4 @@
-var images = [
+var AusAlphabets = [
   "asset/australian/Alphabets/Aa.png","asset/australian/Alphabets/Ab.png","asset/australian/Alphabets/Ac.png","asset/australian/Alphabets/Ad.png",
   "asset/australian/Alphabets/Ae.png","asset/australian/Alphabets/Af.png","asset/australian/Alphabets/Ag.png","asset/australian/Alphabets/Ah.png",
   "asset/australian/Alphabets/Ai.png","asset/australian/Alphabets/Aj.png","asset/australian/Alphabets/Ak.png","asset/australian/Alphabets/Al.png",

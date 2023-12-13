@@ -1,4 +1,4 @@
-var images = [
+var Aslalphabets = [
   "asset/american/Alphabets/A.jpg","asset/american/Alphabets/B.jpg","asset/american/Alphabets/C.jpg","asset/american/Alphabets/D.jpg","asset/american/Alphabets/E.jpg",
   "asset/american/Alphabets/F.jpg","asset/american/Alphabets/G.jpg","asset/american/Alphabets/H.jpg","asset/american/Alphabets/I.jpg","asset/american/Alphabets/J.jpg",
   "asset/american/Alphabets/K.jpg","asset/american/Alphabets/L.jpg","asset/american/Alphabets/M.jpg","asset/american/Alphabets/N.jpg", "asset/american/Alphabets/O.jpg",

@@ -2,12 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:sign_vision/utils/colors.dart';
+import 'package:sign_vision/views/learning/pages/american/alphabets/alphabets_1.dart';
+import 'package:sign_vision/views/learning/pages/american/numbers/numbers_1.dart';
 import '../../../hom_page/learnerpage.dart';
-import 'alphabets/alphabets_2.dart';
-import 'numbers/numbers_2.dart';
 
-class AslButton3 extends StatelessWidget {
-  const AslButton3({super.key});
+void main(){
+  runApp(MaterialApp(home: AslButton1(),));
+}
+
+class AslButton1 extends StatelessWidget {
+  const AslButton1({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +29,7 @@ class AslButton3 extends StatelessWidget {
             child: Column(crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 GestureDetector(
-                  onTap: () => Navigator.pushReplacement(context, (MaterialPageRoute(builder: (context)=> AustralianAlphabets()))),
+                  onTap: () => Navigator.pushReplacement(context, (MaterialPageRoute(builder: (context)=> AmericanAlphabets()))),
                   child: Container(
                     padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
@@ -60,7 +64,7 @@ class AslButton3 extends StatelessWidget {
                 SizedBox(height: 50),
 
                 GestureDetector(
-                  onTap: () => Navigator.pushReplacement(context, (MaterialPageRoute(builder: (context)=> AustralianNumbers()))),
+                  onTap: () => Navigator.pushReplacement(context, (MaterialPageRoute(builder: (context)=> AmericanNumbers()))),
                   child: Container(
                     padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(

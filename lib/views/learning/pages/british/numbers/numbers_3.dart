@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:sign_vision/utils/colors.dart';
-import 'package:sign_vision/views/learning/pages/australian/button.dart';
+import 'package:sign_vision/views/learning/pages/british/button3.dart';
 import '../../british/numbers/utils_n3.dart';
 
 class BritishNumbers extends StatefulWidget {
@@ -31,7 +31,7 @@ class _BritishNumbersState extends State<BritishNumbers> {
             return Container(
               height: 20,
               decoration: BoxDecoration(color: Colors.white,
-                borderRadius: BorderRadius.circular(30),image:DecorationImage(image: AssetImage(images[index])),
+                borderRadius: BorderRadius.circular(30),image:DecorationImage(image: AssetImage(Bslnumbers[index])),
                 // image: DecorationImage(
                 //     image: NetworkImage(images[index]))
               ),

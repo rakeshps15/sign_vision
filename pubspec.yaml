@@ -89,8 +89,8 @@ flutter:
     - asset/indian/Numbers/
     - asset/International/Alphabets/
     - asset/International/Numbers/
-    - asset/Italian/Alphabets/
-    - asset/Italian/Numbers/
+    - asset/german/Alphabets/
+    - asset/german/Numbers/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

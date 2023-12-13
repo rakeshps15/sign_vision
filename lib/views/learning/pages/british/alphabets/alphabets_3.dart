@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:sign_vision/utils/colors.dart';
-import 'package:sign_vision/views/learning/pages/australian/button.dart';
+import 'package:sign_vision/views/learning/pages/british/button3.dart';
 import '../../british/alphabets/utils_3.dart';
 
 class BritishAlpabhabets extends StatefulWidget {
@@ -31,7 +31,7 @@ class _BritishAlpabhabetsState extends State<BritishAlpabhabets> {
             return Container(
               height: 20,
               decoration: BoxDecoration(color: Colors.white,
-                borderRadius: BorderRadius.circular(30),image:DecorationImage(image: AssetImage(images[index],),fit: BoxFit.contain),
+                borderRadius: BorderRadius.circular(30),image:DecorationImage(image: AssetImage(BslAlphabets[index],),fit: BoxFit.contain),
                 // image: DecorationImage(
                 //     image: NetworkImage(images[index]))
               ),
