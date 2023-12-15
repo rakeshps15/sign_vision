@@ -17,7 +17,7 @@ class _BritishAlpabhabetsState extends State<BritishAlpabhabets> {
       appBar: AppBar(
         backgroundColor: MyColors.kblueColor,
         elevation: 0,
-        leading: IconButton(onPressed: ()=>Get.to(AslButton3()), icon: Icon(Icons.arrow_back)),
+        leading: IconButton(onPressed: ()=>Get.to(AslButton3()), icon: Icon(Icons.arrow_back,color: Colors.white,)),
       ),
       backgroundColor: MyColors.kblueColor,
       body: Padding(

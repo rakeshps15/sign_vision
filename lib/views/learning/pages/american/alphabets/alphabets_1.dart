@@ -17,7 +17,7 @@ class _AmericanAlphabetsState extends State<AmericanAlphabets> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        leading: IconButton(onPressed: ()=>Get.to(AslButton1()), icon: Icon(Icons.arrow_back)),
+        leading: IconButton(onPressed: ()=>Get.to(AslButton1()), icon: Icon(Icons.arrow_back,color: Colors.white,)),
         backgroundColor: MyColors.kblueColor,
       ),
       backgroundColor: MyColors.kblueColor,

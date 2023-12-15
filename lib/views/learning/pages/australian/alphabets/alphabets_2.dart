@@ -16,7 +16,7 @@ class _AustralianAlphabetsState extends State<AustralianAlphabets> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        leading: IconButton(onPressed: ()=>Get.to(AslButton2()), icon: Icon(Icons.arrow_back)),
+        leading: IconButton(onPressed: ()=>Get.to(AslButton2()), icon: Icon(Icons.arrow_back,color: Colors.white,)),
         backgroundColor: MyColors.kblueColor,
       ),
       backgroundColor: MyColors.kblueColor,

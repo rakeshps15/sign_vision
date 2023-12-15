@@ -63,9 +63,9 @@ class _UploadScreenState extends State<UploadScreen> {
     return Scaffold(
       backgroundColor: MyColors.kblueColor,
       appBar: AppBar(
-        leading: IconButton(onPressed: ()=>Get.to(HomePage()), icon: Icon(Icons.arrow_back)),
+        leading: IconButton(onPressed: ()=>Get.to(HomePage()), icon: Icon(Icons.arrow_back,color: Colors.white,)),
         backgroundColor: MyColors.kblueColor,
-        title: Text('Image Upload',),
+        title: const Text('Image Upload',style: TextStyle(color: Colors.white),),
       ),
       body: Center(
         child: Column(
@@ -113,7 +113,7 @@ class _UploadScreenState extends State<UploadScreen> {
                             borderRadius: BorderRadius.circular(30.0),
                           ))),
                   onPressed: getImage,
-                  child: Text('Select Image'),
+                  child: Text('Select Image',style: TextStyle(color: Colors.white),),
                 ),
             SizedBox(width: 45,),
             ElevatedButton(
@@ -127,7 +127,7 @@ class _UploadScreenState extends State<UploadScreen> {
               onPressed: () async {
                 await   uploadImage();
               },
-              child: Text('Upload Image'),
+              child: Text('Upload Image',style: TextStyle(color: Colors.white),),
             ),
               ],
             ),

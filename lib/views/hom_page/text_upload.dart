@@ -45,9 +45,9 @@ class _ImageDisplayScreenState extends State<ImageDisplayScreen> {
     return Scaffold(
       backgroundColor: MyColors.kblueColor,
       appBar: AppBar(
-        leading: IconButton(onPressed: ()=>Get.to(HomePage()), icon: Icon(Icons.arrow_back)),
+        leading: IconButton(onPressed: ()=>Get.to(HomePage()), icon: Icon(Icons.arrow_back,color: Colors.white,)),
         backgroundColor: MyColors.kblueColor,
-        title: Text('Text Upload'),
+        title: Text('Text Upload',style: TextStyle(color: Colors.white),),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -88,7 +88,7 @@ class _ImageDisplayScreenState extends State<ImageDisplayScreen> {
                 onPressed: () {
                   _fetchImages(_textController.text);
                 },
-                child: Text('Display'),
+                child: Text('Display',style: TextStyle(color: Colors.white),),
               ),
               SizedBox(height: 120),
               Container(

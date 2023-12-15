@@ -4,7 +4,7 @@ class About extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor: Color(0xfd2e3148),
+      appBar: AppBar(backgroundColor: Colors.deepPurpleAccent,
         title: Text('About Us'),
       ),
       body: Padding(

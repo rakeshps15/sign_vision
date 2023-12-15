@@ -25,7 +25,7 @@ class _LearningState extends State<Learning> {
       appBar: AppBar(
         backgroundColor: MyColors.kblueColor,
         elevation: 0,
-        leading: IconButton(onPressed: ()=>Get.to(HomePage()), icon: Icon(Icons.arrow_back)),),
+        leading: IconButton(onPressed: ()=>Get.to(HomePage()), icon: Icon(Icons.arrow_back,color: Colors.white,)),),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.symmetric(vertical: 20, horizontal: 20),
