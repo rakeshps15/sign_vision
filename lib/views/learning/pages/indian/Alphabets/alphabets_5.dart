@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:sign_vision/utils/colors.dart';
-import 'package:sign_vision/views/learning/pages/german/button4.dart';
 import 'package:sign_vision/views/learning/pages/indian/Alphabets/utils_5.dart';
+import 'package:sign_vision/views/learning/pages/indian/button5.dart';
 
 class IndianAlpabhabets extends StatefulWidget {
   @override
@@ -17,7 +17,7 @@ class _IndianAlpabhabetsState extends State<IndianAlpabhabets> {
       appBar: AppBar(
         backgroundColor: MyColors.kblueColor,
         elevation: 0,
-        leading: IconButton(onPressed: ()=>Get.to(AslButton4()), icon: Icon(Icons.arrow_back)),
+        leading: IconButton(onPressed: ()=>Get.to(AslButton5()), icon: Icon(Icons.arrow_back)),
       ),
       backgroundColor: MyColors.kblueColor,
       body: Padding(

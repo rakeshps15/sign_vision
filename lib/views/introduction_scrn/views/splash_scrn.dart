@@ -15,7 +15,7 @@ class _SplashState extends State<Splash> {
 
   void initState() {
     //what will happen when the app or page is first launched
-    Timer(Duration(seconds: 1), () {
+    Timer(Duration(seconds: 2), () {
       Navigator.of(context)
           .pushReplacement(MaterialPageRoute(builder: (context) => Intro()));
     });

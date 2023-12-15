@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:sign_vision/utils/colors.dart';
-import 'package:sign_vision/views/learning/pages/german/button4.dart';
 import 'package:sign_vision/views/learning/pages/international/Alphabets/utils_6.dart';
+import 'package:sign_vision/views/learning/pages/international/button6.dart';
 
 class InterAlpabhabets extends StatefulWidget {
   @override
@@ -17,7 +17,7 @@ class _InterAlpabhabetsState extends State<InterAlpabhabets> {
       appBar: AppBar(
         backgroundColor: MyColors.kblueColor,
         elevation: 0,
-        leading: IconButton(onPressed: ()=>Get.to(AslButton4()), icon: Icon(Icons.arrow_back)),
+        leading: IconButton(onPressed: ()=>Get.to(AslButton6()), icon: Icon(Icons.arrow_back)),
       ),
       backgroundColor: MyColors.kblueColor,
       body: Padding(

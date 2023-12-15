@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:sign_vision/utils/colors.dart';
-import 'package:sign_vision/views/learning/pages/british/button3.dart';
 import 'package:sign_vision/views/learning/pages/international/Numbers/utils_n6.dart';
+import 'package:sign_vision/views/learning/pages/international/button6.dart';
 
 class InterNumbers extends StatefulWidget {
   @override
@@ -17,7 +17,7 @@ class _InterNumbersState extends State<InterNumbers> {
       appBar: AppBar(
         backgroundColor: MyColors.kblueColor,
         elevation: 0,
-        leading: IconButton(onPressed: ()=>Get.to(AslButton3()), icon: Icon(Icons.arrow_back)),
+        leading: IconButton(onPressed: ()=>Get.to(AslButton6()), icon: Icon(Icons.arrow_back)),
       ),
       backgroundColor: MyColors.kblueColor,
       body: Padding(
