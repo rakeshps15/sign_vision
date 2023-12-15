@@ -1,9 +1,9 @@
 var AusAlphabets = [
-  "asset/australian/Alphabets/Aa.png","asset/australian/Alphabets/Ab.png","asset/australian/Alphabets/Ac.png","asset/australian/Alphabets/Ad.png",
-  "asset/australian/Alphabets/Ae.png","asset/australian/Alphabets/Af.png","asset/australian/Alphabets/Ag.png","asset/australian/Alphabets/Ah.png",
-  "asset/australian/Alphabets/Ai.png","asset/australian/Alphabets/Aj.png","asset/australian/Alphabets/Ak.png","asset/australian/Alphabets/Al.png",
-  "asset/australian/Alphabets/Am.png","asset/australian/Alphabets/An.png","asset/australian/Alphabets/Ao.png","asset/australian/Alphabets/Ap.png",
-  "asset/australian/Alphabets/Aq.png","asset/australian/Alphabets/Ar.png","asset/australian/Alphabets/As.png","asset/australian/Alphabets/At.png",
-  "asset/australian/Alphabets/Au.png","asset/australian/Alphabets/Av.png","asset/australian/Alphabets/Aw.png","asset/australian/Alphabets/Ax.png",
-  "asset/australian/Alphabets/Ay.png","asset/australian/Alphabets/Az.png",
+  "asset/australian/Alphabets/Sa.png","asset/australian/Alphabets/Sb.png","asset/australian/Alphabets/Sc.png","asset/australian/Alphabets/Sd.png",
+  "asset/australian/Alphabets/Se.png","asset/australian/Alphabets/Sf.png","asset/australian/Alphabets/Sg.png","asset/australian/Alphabets/Sh.png",
+  "asset/australian/Alphabets/Si.png","asset/australian/Alphabets/Sj.png","asset/australian/Alphabets/Sk.png","asset/australian/Alphabets/Sl.png",
+  "asset/australian/Alphabets/Sm.png","asset/australian/Alphabets/Sn.png","asset/australian/Alphabets/So.png","asset/australian/Alphabets/Sp.png",
+  "asset/australian/Alphabets/Sq.png","asset/australian/Alphabets/Sr.png","asset/australian/Alphabets/Ss.png","asset/australian/Alphabets/St.png",
+  "asset/australian/Alphabets/Su.png","asset/australian/Alphabets/Sv.png","asset/australian/Alphabets/Sw.png","asset/australian/Alphabets/Sx.png",
+  "asset/australian/Alphabets/Sy.png","asset/australian/Alphabets/Sz.png",
 ];

@@ -19,6 +19,7 @@ class _MainUi extends State<MainUi> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                SizedBox(height: 50,),
                 const Padding(
                   padding: EdgeInsets.only(left: 100,right:100,top: 100),
                   child: Text("Hello There!",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),),
@@ -27,9 +28,9 @@ class _MainUi extends State<MainUi> {
                   padding: EdgeInsets.only(left: 10,right: 10,top: 10),
                   child: Text("Automatic identity verification which enables you to verify your identity",style: TextStyle(fontSize: 10),),
                 ),
-                SizedBox(height: 30,),
+                SizedBox(height: 50,),
                 Lottie.asset("asset/main.json"),
-                SizedBox(height: 30,),
+                SizedBox(height: 50,),
                 Padding(
                   padding:  const EdgeInsets.only(top: 50),
                   child: ElevatedButton(onPressed: (){

@@ -112,7 +112,7 @@ class _LoginState extends State<Login> {
                               borderRadius: BorderRadius.circular(30.0),
                             ))),
                       onPressed: () => validateandLogin(),
-                  child: const Text("LOGIN"),
+                  child: const Text("LOGIN",style: TextStyle(color: Colors.white),),
                   ),
                 ),
                 Row(
