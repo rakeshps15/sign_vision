@@ -84,8 +84,6 @@ flutter:
     - asset/american/Numbers/
     - asset/british/Alphabets/
     - asset/british/Numbers/
-    - asset/australian/Alphabets/
-    - asset/australian/Numbers/
     - asset/indian/Alphabets/
     - asset/indian/Numbers/
     - asset/International/Alphabets/
