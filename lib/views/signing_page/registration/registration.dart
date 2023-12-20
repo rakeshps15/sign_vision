@@ -122,7 +122,6 @@ class _SignupState extends State<Signup> {
                         hintText: "Password",
                         border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10))),
-
                   ),
                 ),
                 SizedBox(height: 40,),
