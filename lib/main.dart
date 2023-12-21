@@ -3,7 +3,6 @@ import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:sign_vision/utils/colors.dart';
 import 'package:sign_vision/views/introduction_scrn/views/splash_scrn.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
