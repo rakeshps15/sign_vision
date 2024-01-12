@@ -40,6 +40,7 @@ class _UploadScreenState extends State<UploadScreen> {
       var image = await http.MultipartFile.fromPath('file', _image!.path);
       request.files.add(image);
 
+
       try {
         var response = await request.send();
         if (response.statusCode == 200) {
