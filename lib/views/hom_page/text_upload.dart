@@ -24,7 +24,6 @@ class _ImageDisplayScreenState extends State<ImageDisplayScreen> {
         Uri.parse(apiUrl),
         body: {'input': text.trim()},
       );
-
       if (response.statusCode == 200) {
         List<dynamic> responseData = json.decode(response.body);
         print("Successful");
